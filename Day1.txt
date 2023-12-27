@@ -1,0 +1,193 @@
+Cloud Computing --- Its all about delivering IT or IT-related services over the internet using pay per usage model.
+
+Cloud Service models: As per NIST there exists 3 service models:
+
+	a. SaaS (Software as a Service)
+		e.g. GMail, GSuite, Office365, etc.
+
+	b. PaaS (Platform as a Service)
+		e.g. Wordpress, Azure SQL DB etc.
+
+	c. IaaS (Infrastructure as a Service)
+		e.g. AWS EC2 
+
+Cloud Delivery Models: As per NIST there exists 4 delivery models:
+
+	a. Private Cloud
+	b. Public Cloud
+	c. Community Cloud
+	d. Hybrid Cloud
+
+What is Bigdata?
+-------------------------
+
+Bigdata is all about the ability of the software/framework/architecture/hardware to HANDLE the data. HANDLE refers to 
+		LOAD
+		PROCESS
+		STORE
+If any of the above phase doesnt work, I can say we are facing a Bigdata Problem.
+
+
+
+Bigdata Project Phases:
+--------------------------
+
+Ideally there exists 5 phases:
+	
+	a. Data Acquistion Phase
+	b. Data Preprocessing Phase
+	c. Data Transformation Phase
+	d. Data View Phase
+	e. Intelligence Layer Phase
+
+
+Regarding AWS Bigdata Lab
+----------------------------
+
+SL offers 
+
+Quota: $16
+Lab time per session: 5hrs (In a day you can have 5 sesssions)
+
+
+AWS Bigdata Engineering
+--------------------------
+
+AWS Certified Data Analytics Speciality ( DAS - C01 )
+
+1. Collection
+	a. AWS Kinesis (Firehose | Data Streams) (Theory + Hands-on)
+	b. AWS Snowball (Theory)
+	c. AWS DMS
+	d. AWS Direct Connect
+	e. AWS SQS
+
+2. Storage
+	a. S3 + Glacier (Theory + Hands-on)
+	b. DynamoDB (Theory + Basic Hands-on)
+
+3. Processing
+	a. AWS Lambda (Theory + Hands-on)
+	b. AWS Glue (Theory + Hands-on)
+	c. AWS EMR (Theory + Hands-on)
+	d. AWS Sagemaker (Theory + Hands-on)
+
+4. Analysis
+	a. AWS Athena (Theory + Hands-on)
+	b. AWS Redshift (Theory + Hands-on)
+	c. AWS Kinesis Data Analytics (Theory + Hands-on)
+
+5. Visualization
+	a. Amazon Quicksight (Quick Intro)
+
+6. Data Security (Theory)
+
+
+
+Pre-req
+=========
+
+Lab1: Provision a Virtual Machine in AWS (IaaS)
+
+1. Type ec2 on search box and go to the dashboard'
+2. Click on Launch Instance > Launch Instance > Amazon Linux 2 AMI (HVM), SSD Volume Type > t2.micro > Launch > Create a new Key Pair (Download the KeyPair and Save it to reuse the same for connecting to the machine) > Launch Instance
+3. Go to EC2 Dashboard > Instances . Ensure the instance is in running state and then select the instance and click on Connect > EC Instant Connect.
+x
+
+Lab2: Accessing VM
+		
+Download putty.zip from GDrive
+
+For Windows Users:
+
+1. Convert pem key file into ppk key file. This can be done using PUTTYGEN.exe
+
+2. OPen Putty.exe and Copy paste the hostname in the Host Name
+
+3. On the left hand side menu, click SSH > Auth.  and set the private key 
+
+4. Click on Connect
+
+5. Username: ec2-user
+
+IAM (Identity Access Management)
+=================================
+
+This allows the user to provide access rights to all objects created in AWS.
+
+
+Demo: Giving administrator access to the VM to access all services in AWS.
+
+Lab 3: How to create security roles for any AWS object?
+
+IAM -- Identity Access Management
+
+This service in AWS allows admins or users to create a new role or to create access token.
+
+Example: We are going give our AWS instance administrator rights to access and control any AWS service in my account.
+
+
+1. Go to IAM dashboard
+2. On the left hand side menu, click on Access Management > Roles
+3. Click on Create Role
+4. Select EC2 and click on Next:Permissions
+5. Attach the following policies:
+	AdministratorAccess
+6. Click on Next > Next > Give a name to the role named 'ec2-admin' and ensure policy is attached and click on Create role
+
+7. Ensure the role is listed on the table.
+
+
+Lab 4: How to attach the role in the object?
+
+1. Go to the appropriate service (EC2 dashboard)
+2. Select the machine on which the role is to be attached
+3. Click on Actions > Security > Modify IAM role > Select the role > Save
+
+
+Lab 5: How to use S3 to store data?
+
+Amazon Simple Storage Service ----> Similar to GDrive but you can have a raw storage or you can have a shared storage
+
+Bucket -----> Main Folder in S3
+Objects ----> Sub Folder in the main folder or File in S3 bucket
+
+
+1. Go to S3 dashboard
+2. Create a bucket named dataset64675
+3. Try creating a folder named transactions
+4. Try Uploading a file.
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
